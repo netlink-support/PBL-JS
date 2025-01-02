@@ -122,9 +122,29 @@ var radicon = {
                 alert('Please enter name');
                 return false;
             }
+            var nameRegex = /^[A-Za-z]+$/;
+            if (!nameRegex.test($('#catalog_name').val())) {
+                alert('Name should contain only alphabetic characters');
+                return false;
+            }
+            if ($('#catalog_name').val().length < 2 || $('#catalog_name').val().length > 50) {
+                alert('Name should be between 2 and 50 characters');
+                return false;
+            }
             if ($('#catalog_mobile').val() == '')
             {
                 alert('Please enter mobile number');
+                return false;
+            }
+            var mobileNumber = $('#catalog_mobile').val();
+            var mobileRegex = /^[0-9]+$/; 
+            if (!mobileRegex.test(mobileNumber)) {
+                alert('Mobile number should contain only digits (0-9)');
+                return false;
+            }
+        
+            if (mobileNumber.length < 10 || mobileNumber.length > 15) {
+                alert('Mobile number should be between 10 and 15 digits');
                 return false;
             }
             if (!radicon.isValidNumber($('#catalog_mobile').val()))
