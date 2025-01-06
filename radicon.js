@@ -1,5 +1,5 @@
 var radicon = {
-    url: "http://beta.netlink.co.in/elecon/",
+    url: "http://192.168.29.51/pbl/",
     ajaxCustom: function (url, data, callback, callback_custom_variable_1)
     {
         $.ajax({
@@ -181,15 +181,6 @@ var radicon = {
                 alert('Please enter name');
                 return false;
             }
-			var nameRegex = /^[A-Za-z]+$/;
-            if (!nameRegex.test($('#inquiry_name').val())) {
-                alert('Name should contain only alphabetic characters');
-                return false;
-            }
-            if ($('#inquiry_name').val().length < 2 || $('#inquiry_name').val().length > 50) {
-                alert('Name should be between 2 and 50 characters');
-                return false;
-            }
             if ($('#inquiry_contact').val() == '')
             {
                 alert('Please enter contact number');
@@ -208,16 +199,6 @@ var radicon = {
             if (!radicon.isValidNumber($('#inquiry_contact').val()))
             {
                 alert('Please enter valid mobile number\nNumbers, plus sign, brackets and hyphens are allowed');
-                return false;
-            }
-			var inquirymobileNumber = $('#inquiry_contact').val();
-            var mobileRegex = /^[0-9]+$/; 
-            if (!mobileRegex.test(inquirymobileNumber)) {
-                alert('Mobile number should contain only digits (0-9)');
-                return false;
-            }
-            if (inquirymobileNumber.length < 10 || inquirymobileNumber.length > 15) {
-                alert('Mobile number should be between 10 and 15 digits');
                 return false;
             }
             if ($('#inquiry_company').val() == '')
