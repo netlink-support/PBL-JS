@@ -162,70 +162,69 @@ var radicon = {
                 alert('Please enter city');
                 return false;
             }
-            if ($('#catalog_country').val() == '')
-            {
+            if ($('#cat_country').val() == null) {
                 alert('Please enter country');
                 return false;
             }
             path = 'ajax/modal_form/'
         } else if (type == 'inquiry')
- {
- if ($('#inquiry_email').val() == '')
- {
- alert('Please enter email');
- return false;
- }
- if ($('#inquiry_name').val() == '')
- {
- alert('Please enter name');
- return false;
- }
- var nameRegex = /^[A-Za-z]+$/;
- if (!nameRegex.test($('#inquiry_name').val())) {
- alert('Name should contain only alphabetic characters');
- return false;
- }
- if ($('#inquiry_name').val().length < 2 || $('#inquiry_name').val().length > 50) {
- alert('Name should be between 2 and 50 characters');
- return false;
- }
- if ($('#inquiry_contact').val() == '')
- {
- alert('Please enter contact number');
- return false;
- }
- var mobileNumber = $('#inquiry_contact').val();
- var mobileRegex = /^[0-9]+$/; 
- if (!mobileRegex.test(mobileNumber)) {
- alert('Mobile number should contain only digits (0-9)');
- return false;
- }
- 
- if (mobileNumber.length < 10 || mobileNumber.length > 15) {
- alert('Mobile number should be between 10 and 15 digits');
- return false;
- }
- if ($('#inquiry_city').val() == '')
- {
- alert('Please enter city');
- return false;
- }
- if ($('#inquiry_country').val() == '')
- {
- alert('Please enter country');
- return false;
- }
- if (!radicon.isValidNumber($('#inquiry_contact').val()))
- {
- alert('Please enter valid mobile number\nNumbers, plus sign, brackets and hyphens are allowed');
- return false;
- }
- if ($('#inquiry_company').val() == '')
- {
- alert('Please enter company name');
- return false;
- }
- path = 'ajax/product_inquiry/'
+        {
+            if ($('#inquiry_email').val() == '')
+            {
+                alert('Please enter email');
+                return false;
+            }
+            if ($('#inquiry_name').val() == '')
+            {
+                alert('Please enter name');
+                return false;
+            }
+            var nameRegex = /^[A-Za-z]+$/;
+            if (!nameRegex.test($('#inquiry_name').val())) {
+                alert('Name should contain only alphabetic characters');
+                return false;
+            }
+            if ($('#inquiry_name').val().length < 2 || $('#inquiry_name').val().length > 50) {
+                alert('Name should be between 2 and 50 characters');
+                return false;
+            }
+            if ($('#inquiry_contact').val() == '')
+            {
+                alert('Please enter contact number');
+                return false;
+            }
+            var mobileNumber = $('#inquiry_contact').val();
+            var mobileRegex = /^[0-9]+$/; 
+            if (!mobileRegex.test(mobileNumber)) {
+                alert('Mobile number should contain only digits (0-9)');
+                return false;
+            }
+        
+            if (mobileNumber.length < 10 || mobileNumber.length > 15) {
+                alert('Mobile number should be between 10 and 15 digits');
+                return false;
+            }
+			 if ($('#inquiry_city').val() == '')
+            {
+                alert('Please enter city');
+                return false;
+            }
+			 if ($('#inquiry_country').val() == null)
+            {
+                alert('Please enter country');
+                return false;
+            }
+            if (!radicon.isValidNumber($('#inquiry_contact').val()))
+            {
+                alert('Please enter valid mobile number\nNumbers, plus sign, brackets and hyphens are allowed');
+                return false;
+            }
+            if ($('#inquiry_company').val() == '')
+            {
+                alert('Please enter company name');
+                return false;
+            }
+            path = 'ajax/product_inquiry/'
         } else if (type == 'div_inquiry')
         {
             if ($('#inquiry_email_d').val() == '')
