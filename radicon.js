@@ -1,5 +1,5 @@
 var radicon = {
-  url: "http://192.168.29.51/pbl/",
+  url: "https://powerbuild.in/",
   ajaxCustom: function (url, data, callback, callback_custom_variable_1) {
     $.ajax({
       url: url,
