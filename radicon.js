@@ -103,7 +103,8 @@ var radicon = {
         alert("Please enter name");
         return false;
       }
-      var nameRegex = /^[A-Za-z]+$/;
+      //var nameRegex = /^[A-Za-z]+$/;
+      var nameRegex = /^[A-Za-z]+(?: [A-Za-z]+)*$/;
       if (!nameRegex.test($("#catalog_name").val())) {
         alert("Name should contain only alphabetic characters");
         return false;
@@ -162,7 +163,8 @@ var radicon = {
         alert("Please enter name");
         return false;
       }
-      var nameRegex = /^[A-Za-z]+$/;
+      //var nameRegex = /^[A-Za-z]+$/;
+      var nameRegex = /^[A-Za-z]+(?: [A-Za-z]+)*$/;
       if (!nameRegex.test($("#catalog_name").val())) {
         alert("Name should contain only alphabetic characters");
         return false;
@@ -217,7 +219,8 @@ var radicon = {
         alert("Please enter name");
         return false;
       }
-      var nameRegex = /^[A-Za-z]+$/;
+      //var nameRegex = /^[A-Za-z]+$/;
+      var nameRegex = /^[A-Za-z]+(?: [A-Za-z]+)*$/;
       if (!nameRegex.test($("#inquiry_name").val())) {
         alert("Name should contain only alphabetic characters");
         return false;
